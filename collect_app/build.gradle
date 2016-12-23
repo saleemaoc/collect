@@ -9,7 +9,7 @@ com.android.ddmlib.DdmPreferences.setTimeOut(60000)
 
 android {
     compileSdkVersion(22)
-    buildToolsVersion("25.0.0")
+    buildToolsVersion("23.0.3")
 
     defaultConfig {
         applicationId("org.odk.collect.android")
