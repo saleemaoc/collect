@@ -37,6 +37,7 @@ import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -213,6 +214,20 @@ public class MainMenuActivity extends Activity {
 
             }
         });
+
+        // settings
+/*
+        ImageButton geoodk_settings_but = (ImageButton) findViewById(R.id.geoodk_settings_butt);
+        geoodk_settings_but.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Collect.getInstance()
+                        .getActivityLogger()
+                        .logAction(this,"Main_Settings","click");
+                Intent ig = new Intent( getApplicationContext(), MainSettingsActivity.class);
+                startActivity(ig);
+            }
+        });
+*/
 
         // manage forms button. no result expected.
         mManageFilesButton = (Button) findViewById(R.id.manage_forms);
