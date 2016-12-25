@@ -10,6 +10,7 @@
     android:orientation="vertical"
     android:padding="0dp" >
 
+<!--
     <TextView
         android:id="@+id/main_menu_header"
         android:layout_width="fill_parent"
@@ -18,9 +19,10 @@
         android:paddingBottom="5dp"
         android:paddingTop="10dp"
         android:text=""
-        android:textSize="18sp"
+        android:textSize="10sp"
         android:visibility="invisible"
         android:textStyle="italic"/>
+-->
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -34,23 +36,26 @@
 
             <LinearLayout
                 android:id="@+id/row1"
+                android:layout_marginTop="30dp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
                 android:gravity="center_vertical" >
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
+
                     android:gravity="center_horizontal" >
 
                     <ImageButton
+
                         android:id="@+id/enter_data"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/state_color"
-                        android:src="@drawable/geoodk_notes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_bg"
+                        android:src="@drawable/fill"
+                        android:layout_centerHorizontal="true"
                         android:gravity="center_horizontal"  >
                     </ImageButton>
 
@@ -59,8 +64,8 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/enter_data"
                         android:clickable="false"
-                        android:layout_marginLeft="15dp"
                         android:text="Fill Form"
+                        android:layout_centerHorizontal="true"
                         android:gravity="center_horizontal"/>
                 </RelativeLayout>
 
@@ -72,10 +77,11 @@
 
                     <ImageButton
                         android:id="@+id/send_data"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/state_color"
-                        android:src="@drawable/data_upload_blue" >
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/round_bg"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/send" >
                     </ImageButton>
 
                     <TextView
@@ -83,7 +89,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/send_data"
-                        android:layout_marginLeft="15dp"
+                        android:layout_centerHorizontal="true"
                         android:clickable="false"
                         android:text="Send Form" />
                 </RelativeLayout>
@@ -92,7 +98,7 @@
                 android:id="@+id/row2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp"
                 android:gravity="center_vertical" >
 
                 <RelativeLayout
@@ -103,10 +109,11 @@
 
                     <ImageButton
                         android:id="@+id/review_data"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/state_color"
-                        android:src="@drawable/edit_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_bg"
+                        android:src="@drawable/edit"
+                        android:layout_centerHorizontal="true"
                         android:gravity="center_horizontal"  >
                     </ImageButton>
 
@@ -115,7 +122,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/review_data"
                         android:clickable="false"
-                        android:layout_marginLeft="15dp"
+                        android:layout_centerHorizontal="true"
                         android:text="Edit Form"
                         android:gravity="center_horizontal"/>
                 </RelativeLayout>
@@ -127,10 +134,11 @@
 
                     <ImageButton
                         android:id="@+id/manage_forms"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/state_color"
-                        android:src="@drawable/delete_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_bg"
+                        android:src="@drawable/delete"
+                        android:layout_centerHorizontal="true"
                         android:gravity="center_horizontal"  >
                     </ImageButton>
 
@@ -139,18 +147,17 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/manage_forms"
                         android:clickable="false"
-                        android:layout_marginLeft="15dp"
+                        android:layout_centerHorizontal="true"
                         android:text="Delete Form"
                         android:gravity="center_horizontal"/>
                 </RelativeLayout>
 
         </LinearLayout>
-
-            <!--            <LinearLayout
+            <LinearLayout
                 android:id="@+id/row3"
+                android:layout_marginTop="30dp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
                 android:gravity="center_vertical" >
 
                 <RelativeLayout
@@ -161,19 +168,20 @@
 
                     <ImageButton
                         android:id="@+id/get_forms"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/state_color"
-                        android:src="@drawable/map_data" >
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/round_bg"
+                        android:src="@drawable/get_forms" >
                     </ImageButton>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/get_forms"
-                        android:layout_marginLeft="20dp"
+                        android:layout_centerHorizontal="true"
                         android:clickable="false"
-                        android:text="Forms List" />
+                        android:text="Get Forms" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -183,24 +191,25 @@
                     android:gravity="center" >
 
                     <ImageButton
-                        android:id="@+id/geoodk_settings_butt"
+                        android:id="@+id/settings_btn"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:background="@drawable/state_color"
-                        android:src="@drawable/settings_gear"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/round_bg"
+                        android:src="@drawable/settings"
                         android:gravity="center_horizontal" >
                     </ImageButton>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/geoodk_settings_butt"
-                        android:layout_marginLeft="20dp"
+                        android:layout_below="@+id/settings_btn"
+                        android:layout_centerHorizontal="true"
                         android:clickable="false"
                         android:text="Settings" />
                 </RelativeLayout>
 
-            </LinearLayout>-->
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

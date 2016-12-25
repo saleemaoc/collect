@@ -81,7 +81,7 @@ public class MainMenuActivity extends Activity {
     private ImageButton mManageFilesButton;
     private ImageButton mSendDataButton;
     private ImageButton mReviewDataButton;
-    //private ImageButton mGetFormsButton;
+    private ImageButton mGetFormsButton;
     //private TextView mSendText;
 
     //private View mReviewSpacer;
@@ -121,9 +121,11 @@ public class MainMenuActivity extends Activity {
 
         {
             // dynamically construct the "ODK Collect vA.B" string
+/*
             TextView mainMenuMessageLabel = (TextView) findViewById(R.id.main_menu_header);
             mainMenuMessageLabel.setText(Collect.getInstance()
                     .getVersionedAppName());
+*/
         }
 
         setTitle(getString(R.string.app_name) + " > " + getString(R.string.main_menu));
@@ -195,7 +197,7 @@ public class MainMenuActivity extends Activity {
         //mSendText = (TextView) findViewById(R.id.send_data_text);
 
         // manage forms button. no result expected.
-/*        mGetFormsButton = (ImageButton) findViewById(R.id.get_forms);
+        mGetFormsButton = (ImageButton) findViewById(R.id.get_forms);
         //mGetFormsButton.setText(getString(R.string.get_forms));
         mGetFormsButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -217,21 +219,30 @@ public class MainMenuActivity extends Activity {
                 startActivity(i);
 
             }
-        });*/
+        });
 
         // settings
-/*
-        ImageButton geoodk_settings_but = (ImageButton) findViewById(R.id.geoodk_settings_butt);
+
+        ImageButton geoodk_settings_but = (ImageButton) findViewById(R.id.settings_btn);
         geoodk_settings_but.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+/*
                 Collect.getInstance()
                         .getActivityLogger()
                         .logAction(this,"Main_Settings","click");
                 Intent ig = new Intent( getApplicationContext(), MainSettingsActivity.class);
                 startActivity(ig);
+*/
+                Collect.getInstance()
+                        .getActivityLogger()
+                        .logAction(this, "onOptionsItemSelected",
+                                "MENU_PREFERENCES");
+                Intent ig = new Intent(getApplicationContext(), PreferencesActivity.class);
+                startActivity(ig);
+
             }
         });
-*/
+
 
         // manage forms button. no result expected.
         mManageFilesButton = (ImageButton) findViewById(R.id.manage_forms);
