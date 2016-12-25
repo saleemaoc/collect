@@ -1,5 +1,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
+<!--
     <PreferenceScreen
         android:id="@+id/info"
         android:key="info"
@@ -7,8 +8,9 @@
         android:title="@string/app_name" >
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="http://opendatakit.org" />
+            android:data="http://cf.checkform.net" />
     </PreferenceScreen>
+-->
 
     <PreferenceCategory
         android:key="@string/server_preferences"

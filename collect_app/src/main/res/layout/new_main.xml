@@ -19,12 +19,13 @@
         android:paddingTop="10dp"
         android:text=""
         android:textSize="18sp"
+        android:visibility="invisible"
         android:textStyle="italic"/>
-
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_marginTop="20dp"
         android:orientation="vertical" >
         <LinearLayout
             android:layout_width="fill_parent"
@@ -59,7 +60,7 @@
                         android:layout_below="@+id/enter_data"
                         android:clickable="false"
                         android:layout_marginLeft="15dp"
-                        android:text="Collect Data"
+                        android:text="Fill Form"
                         android:gravity="center_horizontal"/>
                 </RelativeLayout>
 
@@ -78,12 +79,13 @@
                     </ImageButton>
 
                     <TextView
+                        android:id="@+id/send_data_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/send_data"
                         android:layout_marginLeft="15dp"
                         android:clickable="false"
-                        android:text="Send Data" />
+                        android:text="Send Form" />
                 </RelativeLayout>
             </LinearLayout>
             <LinearLayout
@@ -114,7 +116,7 @@
                         android:layout_below="@+id/review_data"
                         android:clickable="false"
                         android:layout_marginLeft="15dp"
-                        android:text="Edit Data"
+                        android:text="Edit Form"
                         android:gravity="center_horizontal"/>
                 </RelativeLayout>
                 <RelativeLayout
@@ -138,17 +140,41 @@
                         android:layout_below="@+id/manage_forms"
                         android:clickable="false"
                         android:layout_marginLeft="15dp"
-                        android:text="Delete Data"
+                        android:text="Delete Form"
                         android:gravity="center_horizontal"/>
                 </RelativeLayout>
 
         </LinearLayout>
-            <LinearLayout
+
+            <!--            <LinearLayout
                 android:id="@+id/row3"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"
                 android:gravity="center_vertical" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center" >
+
+                    <ImageButton
+                        android:id="@+id/get_forms"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/state_color"
+                        android:src="@drawable/map_data" >
+                    </ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/get_forms"
+                        android:layout_marginLeft="20dp"
+                        android:clickable="false"
+                        android:text="Forms List" />
+                </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -174,30 +200,7 @@
                         android:text="Settings" />
                 </RelativeLayout>
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="50"
-                    android:gravity="center" >
-
-                    <ImageButton
-                        android:id="@+id/get_forms"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:background="@drawable/state_color"
-                        android:src="@drawable/map_data" >
-                    </ImageButton>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/get_forms"
-                        android:layout_marginLeft="20dp"
-                        android:clickable="false"
-                        android:text="Get Forms" />
-                </RelativeLayout>
-
-            </LinearLayout>
+            </LinearLayout>-->
         </LinearLayout>
     </ScrollView>
 
