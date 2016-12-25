@@ -375,7 +375,7 @@ public class MainMenuActivity extends Activity {
                 .logAction(this, "onCreateOptionsMenu", "show");
         super.onCreateOptionsMenu(menu);
 
-        CompatibilityUtils.setShowAsAction(
+/*        CompatibilityUtils.setShowAsAction(
                 menu.add(0, MENU_GET_FORM, 0, "Get New Forms")
                         .setIcon(R.drawable.ic_menu_preferences),
                 MenuItem.SHOW_AS_ACTION_NEVER);
@@ -383,7 +383,7 @@ public class MainMenuActivity extends Activity {
         CompatibilityUtils.setShowAsAction(
                 menu.add(0, MENU_PREFERENCES, 0, R.string.general_preferences)
                         .setIcon(R.drawable.ic_menu_preferences),
-                MenuItem.SHOW_AS_ACTION_NEVER);
+                MenuItem.SHOW_AS_ACTION_NEVER);*/
         CompatibilityUtils.setShowAsAction(
                 menu.add(0, MENU_ADMIN, 0, R.string.admin_preferences)
                         .setIcon(R.drawable.ic_menu_login),
