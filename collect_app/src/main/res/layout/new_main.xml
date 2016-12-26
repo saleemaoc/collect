@@ -8,27 +8,28 @@
     android:layout_marginRight="0dp"
     android:layout_marginTop="0dp"
     android:orientation="vertical"
-    android:padding="0dp" >
+    android:padding="0dp">
 
-<!--
-    <TextView
-        android:id="@+id/main_menu_header"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingBottom="5dp"
-        android:paddingTop="10dp"
-        android:text=""
-        android:textSize="10sp"
-        android:visibility="invisible"
-        android:textStyle="italic"/>
--->
+    <!--
+        <TextView
+            android:id="@+id/main_menu_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:text=""
+            android:textSize="10sp"
+            android:visibility="invisible"
+            android:textStyle="italic"/>
+    -->
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:padding="24dp">
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -36,149 +37,197 @@
 
             <LinearLayout
                 android:id="@+id/row1"
-                android:layout_marginTop="30dp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical" >
+                android:gravity="center_vertical">
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
+                    android:gravity="center_horizontal">
 
-                    android:gravity="center_horizontal" >
-
-                    <ImageButton
-
-                        android:id="@+id/enter_data"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/round_bg"
-                        android:src="@drawable/fill"
+                    <LinearLayout
+                        android:id="@+id/enter_data_container"
+                        android:layout_width="@dimen/icon_boundary"
+                        android:layout_height="@dimen/icon_boundary"
                         android:layout_centerHorizontal="true"
-                        android:gravity="center_horizontal"  >
-                    </ImageButton>
+                        android:background="@drawable/round_bg"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/enter_data"
+                            android:layout_width="@dimen/icon_size"
+                            android:layout_height="@dimen/icon_size"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/state_color"
+                            android:gravity="center_horizontal"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/fill"></ImageButton>
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/enter_data"
-                        android:clickable="false"
-                        android:text="Fill Form"
+                        android:layout_below="@+id/enter_data_container"
                         android:layout_centerHorizontal="true"
-                        android:gravity="center_horizontal"/>
+                        android:clickable="false"
+                        android:gravity="center_horizontal"
+                        android:text="Fill Form" />
                 </RelativeLayout>
 
                 <RelativeLayout
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
-                    android:gravity="center" >
+                    android:gravity="center">
 
-                    <ImageButton
-                        android:id="@+id/send_data"
-                        android:layout_width="wrap_content"
-                        android:background="@drawable/round_bg"
-                        android:layout_height="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/send_data_container"
+                        android:layout_width="@dimen/icon_boundary"
+                        android:layout_height="@dimen/icon_boundary"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/send" >
-                    </ImageButton>
+                        android:background="@drawable/round_bg"
+                        android:gravity="center">
+
+
+                        <ImageButton
+                            android:id="@+id/send_data"
+                            android:layout_width="@dimen/icon_size"
+                            android:layout_height="@dimen/icon_size"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/state_color"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/send"></ImageButton>
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/send_data_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/send_data"
+                        android:layout_below="@+id/send_data_container"
                         android:layout_centerHorizontal="true"
                         android:clickable="false"
                         android:text="Send Form" />
                 </RelativeLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/row2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:gravity="center_vertical" >
+                android:gravity="center_vertical">
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
-                    android:gravity="center_horizontal" >
+                    android:gravity="center_horizontal">
 
-                    <ImageButton
-                        android:id="@+id/review_data"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/round_bg"
-                        android:src="@drawable/edit"
+                    <LinearLayout
+                        android:id="@+id/review_data_container"
+                        android:layout_width="@dimen/icon_boundary"
+                        android:layout_height="@dimen/icon_boundary"
                         android:layout_centerHorizontal="true"
-                        android:gravity="center_horizontal"  >
-                    </ImageButton>
+                        android:background="@drawable/round_bg"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/review_data"
+                            android:layout_width="@dimen/icon_size"
+                            android:layout_height="@dimen/icon_size"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/state_color"
+                            android:gravity="center_horizontal"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/edit"></ImageButton>
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/review_data"
-                        android:clickable="false"
+                        android:layout_below="@+id/review_data_container"
                         android:layout_centerHorizontal="true"
-                        android:text="Edit Form"
-                        android:gravity="center_horizontal"/>
+                        android:clickable="false"
+                        android:gravity="center_horizontal"
+                        android:text="Edit Form" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
-                    android:gravity="center_horizontal" >
+                    android:gravity="center_horizontal">
 
-                    <ImageButton
-                        android:id="@+id/manage_forms"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/round_bg"
-                        android:src="@drawable/delete"
+
+                    <LinearLayout
+                        android:id="@+id/manage_forms_container"
+                        android:layout_width="@dimen/icon_boundary"
+                        android:layout_height="@dimen/icon_boundary"
                         android:layout_centerHorizontal="true"
-                        android:gravity="center_horizontal"  >
-                    </ImageButton>
+                        android:background="@drawable/round_bg"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/manage_forms"
+                            android:layout_width="@dimen/icon_size"
+                            android:layout_height="@dimen/icon_size"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/state_color"
+                            android:gravity="center_horizontal"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/delete"></ImageButton>
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/manage_forms"
-                        android:clickable="false"
+                        android:layout_below="@+id/manage_forms_container"
                         android:layout_centerHorizontal="true"
-                        android:text="Delete Form"
-                        android:gravity="center_horizontal"/>
+                        android:clickable="false"
+                        android:gravity="center_horizontal"
+                        android:text="Delete Form" />
                 </RelativeLayout>
 
-        </LinearLayout>
+            </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/row3"
-                android:layout_marginTop="30dp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical" >
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical">
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
-                    android:gravity="center" >
+                    android:gravity="center">
 
-                    <ImageButton
-                        android:id="@+id/get_forms"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/get_forms_container"
+                        android:layout_width="@dimen/icon_boundary"
+                        android:layout_height="@dimen/icon_boundary"
                         android:layout_centerHorizontal="true"
                         android:background="@drawable/round_bg"
-                        android:src="@drawable/get_forms" >
-                    </ImageButton>
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/get_forms"
+                            android:layout_width="@dimen/icon_size"
+                            android:layout_height="@dimen/icon_size"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/state_color"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/get_forms"></ImageButton>
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/get_forms"
+                        android:layout_below="@+id/get_forms_container"
                         android:layout_centerHorizontal="true"
                         android:clickable="false"
                         android:text="Get Forms" />
@@ -188,22 +237,31 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
-                    android:gravity="center" >
+                    android:gravity="center">
 
-                    <ImageButton
-                        android:id="@+id/settings_btn"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                    <LinearLayout
+                        android:id="@+id/settings_btn_container"
+                        android:layout_width="@dimen/icon_boundary"
+                        android:layout_height="@dimen/icon_boundary"
                         android:layout_centerHorizontal="true"
                         android:background="@drawable/round_bg"
-                        android:src="@drawable/settings"
-                        android:gravity="center_horizontal" >
-                    </ImageButton>
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/settings_btn"
+                            android:layout_width="@dimen/icon_size"
+                            android:layout_height="@dimen/icon_size"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/state_color"
+                            android:gravity="center_horizontal"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/settings"></ImageButton>
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/settings_btn"
+                        android:layout_below="@+id/settings_btn_container"
                         android:layout_centerHorizontal="true"
                         android:clickable="false"
                         android:text="Settings" />

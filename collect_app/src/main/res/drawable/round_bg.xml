@@ -8,9 +8,9 @@
         android:width="2dp"
         android:color="#2196f3"/>
 
-    <solid android:color="#112196f3" />
+<!--    <solid android:color="#112196f3" />-->
     <size
-        android:width="100dp"
-        android:height="100dp"/>
+        android:width="@dimen/icon_boundary"
+        android:height="@dimen/icon_boundary"/>
 
     </shape>
