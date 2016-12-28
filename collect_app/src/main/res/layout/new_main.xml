@@ -28,7 +28,9 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:paddingTop="18dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -117,7 +119,7 @@
                 android:id="@+id/row2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center_vertical">
 
                 <RelativeLayout
@@ -197,7 +199,7 @@
                 android:id="@+id/row3"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center_vertical">
 
                 <RelativeLayout
@@ -267,7 +269,84 @@
                         android:text="Settings" />
                 </RelativeLayout>
 
+
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/map_btn_container"
+                        android:layout_width="@dimen/icon_boundary"
+                        android:layout_height="@dimen/icon_boundary"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/round_bg"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/map_btn"
+                            android:layout_width="@dimen/icon_size"
+                            android:layout_height="@dimen/icon_size"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/state_color"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/map"></ImageButton>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/map_btn_container"
+                        android:layout_centerHorizontal="true"
+                        android:clickable="false"
+                        android:text="Map" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/about_btn_container"
+                        android:layout_width="@dimen/icon_boundary"
+                        android:layout_height="@dimen/icon_boundary"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/round_bg"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/about_btn"
+                            android:layout_width="@dimen/icon_size"
+                            android:layout_height="@dimen/icon_size"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/state_color"
+                            android:gravity="center_horizontal"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/info"></ImageButton>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/about_btn_container"
+                        android:layout_centerHorizontal="true"
+                        android:clickable="false"
+                        android:text="About" />
+                </RelativeLayout>
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
