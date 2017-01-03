@@ -10,16 +10,14 @@ com.android.ddmlib.DdmPreferences.setTimeOut(60000)
 android {
     compileSdkVersion(22)
     buildToolsVersion("23.0.3")
-
     defaultConfig {
-        applicationId("org.odk.collect.android")
+        applicationId('com.checkform.datacollect')
         minSdkVersion(9)
         targetSdkVersion(9)
         versionCode(1063)
         versionName("1.4.12")
         testInstrumentationRunner("android.support.test.runner.AndroidJUnitRunner")
     }
-
     buildTypes {
         release {
             minifyEnabled(true)
@@ -31,7 +29,6 @@ android {
             testCoverageEnabled(true)
         }
     }
-
     packagingOptions {
         // Pick first occurrence of any files that cause conflicts, as defined
         // in common.gradle
@@ -45,10 +42,11 @@ android {
         pickFirst 'META-INF/services/javax.ws.rs.ext.MessageBodyReader'
         pickFirst 'META-INF/services/javax.ws.rs.ext.MessageBodyWriter'
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
+    }
+    productFlavors {
     }
 }
 
@@ -75,13 +73,12 @@ allprojects {
     }
 }
 dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
+    compile fileTree(include: '*.jar', dir: 'libs')
     compile 'com.google.android.gms:play-services:4.1.32'
-
     // Testing-only dependencies
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.10.19'
-    testCompile "org.robolectric:robolectric:3.1.2"
+    testCompile 'org.robolectric:robolectric:3.1.2'
     androidTestCompile 'com.android.support:support-annotations:24.0.0'
     androidTestCompile 'com.android.support.test:runner:0.5'
     androidTestCompile 'com.android.support.test:rules:0.5'
